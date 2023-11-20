@@ -2,8 +2,8 @@
   <% @movies.each do |movie| %>
     <li>
       <strong> <%= movie.title %> </strong>
-      <p>Released on: <%= movie.released_on %></p>
-      <p>Summary: <%= movie.description %></p>
+      <p>Released on: <%= release_date(movie) %></p>
+      <p>Summary: <%= truncate(movie.description, length: 10, separator: '') %></p>
     </li>
   <% end %>
 </ul>
