@@ -1,5 +1,9 @@
 <ul>
   <% @movies.each do |movie| %>
-    <li> <%= movie %> </li>
+    <li>
+      <strong> <%= movie.title %> </strong>
+      <p>Released on: <%= movie.released_on %></p>
+      <p>Summary: <%= movie.description %></p>
+    </li>
   <% end %>
 </ul>
