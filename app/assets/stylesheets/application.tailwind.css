@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer components {
   .section-container {
     @apply container max-w-[85%];
+  }
+
+  .base-card {
+    @apply border-solid border-2 border-zinc-100 rounded-md shadow-md
   }
 }
 
