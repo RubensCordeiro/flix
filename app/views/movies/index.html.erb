@@ -1,7 +1,7 @@
 <section class="section-container">
   <ul class="flex flex-col gap-y-[16px]">
     <% @movies.each do |movie| %>
-      <li class="flex items-center justify-between h-[132px] px-[16px] base-card">
+      <li class="flex items-center justify-between base-card">
         <div class="">
           <p><strong> <%= movie.title %> </strong></p>
           <p>Released on: <%= release_date(movie) %></p>

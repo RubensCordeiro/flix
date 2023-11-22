@@ -1,0 +1,10 @@
+<section class="section-container">
+  <div class="base-card flex items-center justify-between">
+      <div class="">
+        <p><strong> <%= @movie.title %> </strong></p>
+        <p>Released on: <%= release_date(@movie) %></p>
+        <p>Summary: <%= truncate(@movie.description, length: 10, separator: '') %></p>
+      </div>
+    <div class="w-[64px] text-center border-solid border-b border-t border-zinc-300 py-[2px]"><%= gross_amount(@movie) %></div>
+  </div>
+</section>
