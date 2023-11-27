@@ -1,5 +1,8 @@
-<section class="section-container">
-  <ul class="flex flex-col gap-y-[16px]">
+<section class="section-container flex flex-col items-center">
+  <%= link_to new_movie_path do %>
+    <button class='mx-auto bg-zinc-600 px-[8px] py-[4px] rounded-md text-white mb-[16px]'>Add a movie</button>
+  <% end  %>
+  <ul class="flex flex-col gap-y-[16px] w-full">
     <% @movies.each do |movie| %>
       <%= link_to movie do  %>
         <li class="flex items-center justify-between base-card">
@@ -12,5 +15,5 @@
         </li>
       <% end  %>
     <% end %>
-</ul>
+  </ul> 
 </section>
