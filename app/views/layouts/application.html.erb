@@ -12,7 +12,15 @@
   </head>
 
   <body>
-    <header class="flex items-center justify-center bg-zinc-200 text-white shadow-sm h-[48px] text-zinc-700 mb-[24px]">Flix</header>
+    <header class="flex items-center bg-zinc-200 text-white shadow-sm h-[48px] text-zinc-700 mb-[24px]">
+      <nav class="section-container">
+        <ul>
+          <li>
+            <%= link_to("All Movies", movies_path)  %>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <div class="section-container"><%= yield %></div>
     <footer class="flex items-center justify-center bg-zinc-100 text-white shadow-sm h-[48px] text-zinc-700 mt-[24px]">
       <a href="www.google.com">Foo studios</a>

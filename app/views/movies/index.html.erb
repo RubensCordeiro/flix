@@ -1,14 +1,16 @@
 <section class="section-container">
   <ul class="flex flex-col gap-y-[16px]">
     <% @movies.each do |movie| %>
-      <li class="flex items-center justify-between base-card">
-        <div class="">
-          <p><strong> <%= movie.title %> </strong></p>
-          <p>Released on: <%= release_date(movie) %></p>
-          <p>Summary: <%= truncate(movie.description, length: 10, separator: '') %></p>
-        </div>
-        <div class="w-[64px] text-center border-solid border-b border-t border-zinc-300 py-[2px]"><%= gross_amount(movie) %></div>
-      </li>
+      <%= link_to movie do  %>
+        <li class="flex items-center justify-between base-card">
+          <div class="">
+            <p><strong> <%= movie.title %> </strong></p>
+            <p>Released on: <%= release_date(movie) %></p>
+            <p>Summary: <%= truncate(movie.description, length: 10, separator: '') %></p>
+          </div>
+          <div class="w-[64px] text-center border-solid border-b border-t border-zinc-300 py-[2px]"><%= gross_amount(movie) %></div>
+        </li>
+      <% end  %>
     <% end %>
 </ul>
 </section>
