@@ -12,5 +12,14 @@
       <%= f.label :gross_amount, {class: 'form-label mb-[4px] text-zinc-900 font-bold'} %>
       <%= f.number_field :gross_amount, {class: 'border-2 border-solid border-zinc-100 rounded-md shadow-sm text-zinc-900'}  %>
     </div>
+    <div class="form-group flex flex-col">
+      <%= f.label :released_on, {class: 'form-label mb-[4px] text-zinc-900 font-bold'} %>
+      <div class="flex flex-wrap  items-center gap-[8px]">
+        <%= f.date_select :released_on, {}, {class: 'border-2 border-solid border-zinc-100 rounded-md'} %>
+      </div>
+    </div>
+    <%= f.button class: 'mx-auto bg-zinc-600 px-[8px] py-[4px] rounded-md text-white', type: 'submit' do %>
+      Update Movie
+    <% end  %>
   <% end %>
 </section>
