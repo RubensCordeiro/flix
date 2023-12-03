@@ -7,7 +7,12 @@
       </div>
     <div class="w-[64px] text-center border-solid border-b border-t border-zinc-300 py-[2px]"><%= gross_amount(@movie) %></div>
   </div>
-  <%= link_to edit_movie_path(@movie) do %>
+  <div class="flex gap-[8px]">
+      <%= link_to edit_movie_path(@movie) do %>
     <button class='mx-auto bg-zinc-600 px-[8px] py-[4px] rounded-md text-white'>Edit Movie</button>
-  <% end  %>
+    <% end  %>
+    <%= link_to @movie, data: {turbo_method: :delete, turbo_confirm: "Really?"} do %>
+      <button class='mx-auto bg-zinc-600 px-[8px] py-[4px] rounded-md text-white'>Delete Movie</button>
+    <% end  %>
+  </div>
 </section>
